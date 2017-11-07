@@ -8,8 +8,9 @@ This app allows you to:
 * view video comments,
 * search videos, music and channels,
 * channel subscription & non-intrusive notifications,
-* bookmark videos **[New!]**
-* subscriptions feed **[New!]**
+* bookmark videos,
+* subscriptions feed,
+* import subscriptions from YouTube **[New!]**
 
 ... all at the tip of your fingers.
 
@@ -20,7 +21,7 @@ For screenshots and more information, please visit [www.skytube-app.com](http://
 
 ## Download
 ### Download SkyTube Extra
-[![Download SkyTube Extra APK](screenshots/download_apk.png)](https://github.com/ram-on/SkyTube/releases/download/v2.50/SkyTube-Extra-2.50.apk)
+[![Download SkyTube Extra APK](screenshots/download_apk.png)](https://github.com/ram-on/SkyTube/releases/download/v2.70/SkyTube-Extra-2.70.apk)
 
 Open source app with extra features.  These extra features use third-party closed source libraries:
 * YouTubeAndroidPlayerApi.jar (optional usage)
@@ -37,20 +38,20 @@ Pure open-source version.  Updates normally take up to 3 days to be available to
 * Innovative design
 * No intrusive ads
 * Multilingual
-* Only requires 2 Android-permissions (Internet [mandatory] and access to External Storage [optional])
+* Only requires 3 Android-permissions (Internet [mandatory], access to External Storage [optional], install packages (for auto-updater) [optional -- applicable for SkyTube Extra])
 * Not dependent on the GAPPS/Google Apps (i.e. YouTube official app)
 * No need for Google/YouTube account to operate
 * My code does not spy on your behaviour!
 
 ## Screenshots
 ### Mobile
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/comments.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/comments.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg)
-[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/search.jpg" width=960>](https://ram-on.github.io/SkyTube/assets/img/screenshots/search.jpg)
+![Trending](https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg)
+![Subscriptions](https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg)
+![Bookmarks](https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg)
+![Play video](https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg)
+![View comments](https://ram-on.github.io/SkyTube/assets/img/screenshots/comments.jpg)
+![Browse channel](https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg)
+![Search videos](https://ram-on.github.io/SkyTube/assets/img/screenshots/search.jpg)
 
 ## Credits
 This project was possible with the support and contribution of [numerous volunteers and third-party projects](http://skytube-app.com/credits.html).
