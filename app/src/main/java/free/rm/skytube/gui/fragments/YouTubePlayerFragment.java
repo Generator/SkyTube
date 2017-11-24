@@ -18,6 +18,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import free.rm.skytube.util.ControllerOverlay;
 import free.rm.skytube.util.GestureControllerOverlay;
@@ -271,7 +272,7 @@ public class YouTubePlayerFragment extends FragmentEx implements MediaPlayer.OnP
 				if (youTubeChannel != null) {
 					Glide.with(getActivity())
 									.load(youTubeChannel.getThumbnailNormalUrl())
-									.placeholder(R.drawable.channel_thumbnail_default)
+									.apply(new RequestOptions().placeholder(R.drawable.channel_thumbnail_default))
 									.into(videoDescChannelThumbnailImageView);
 				}
 			}

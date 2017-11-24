@@ -1,5 +1,5 @@
 # SkyTube
-An open-source YouTube player for the Android operating system.
+**An open-source YouTube player for the Android operating system.**
 
 This app allows you to:
 * explore Featured and Most Popular videos,
@@ -15,6 +15,8 @@ This app allows you to:
 ... all at the tip of your fingers.
 
 More features will be added in the near future.
+
+<a href="https://hosted.weblate.org/engage/skytube/?utm_source=widget"> <img src="https://hosted.weblate.org/widgets/skytube/-/strings/svg-badge.svg" alt="Translation status"/> </a>
 
 ## Website
 For screenshots and more information, please visit [www.skytube-app.com](http://www.skytube-app.com).
@@ -45,13 +47,15 @@ Pure open-source version.  Updates normally take up to 3 days to be available to
 
 ## Screenshots
 ### Mobile
-![Trending](https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg)
-![Subscriptions](https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg)
-![Bookmarks](https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg)
-![Play video](https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg)
-![View comments](https://ram-on.github.io/SkyTube/assets/img/screenshots/comments.jpg)
-![Browse channel](https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg)
-![Search videos](https://ram-on.github.io/SkyTube/assets/img/screenshots/search.jpg)
+[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg" width=250>](https://ram-on.github.io/SkyTube/assets/img/screenshots/trending.jpg)
+[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg" alt="Subscriptions" width="250" />](https://ram-on.github.io/SkyTube/assets/img/screenshots/subs.jpg)
+[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg" alt="Bookmarks" width="250" />](https://ram-on.github.io/SkyTube/assets/img/screenshots/bookmarks.jpg")
+
+[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg" alt="Play video" width="250" />](https://ram-on.github.io/SkyTube/assets/img/screenshots/play.jpg")
+[<img src="https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg" alt="Browse channel" width="250" />](https://ram-on.github.io/SkyTube/assets/img/screenshots/channel.jpg")
+
+### Tablet
+![Browse channel using tablet](https://ram-on.github.io/SkyTube/assets/img/screenshots/channel_tablet.jpg)
 
 ## Credits
 This project was possible with the support and contribution of [numerous volunteers and third-party projects](http://skytube-app.com/credits.html).

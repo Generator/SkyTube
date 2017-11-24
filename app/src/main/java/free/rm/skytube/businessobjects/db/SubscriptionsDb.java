@@ -19,7 +19,6 @@ package free.rm.skytube.businessobjects.db;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
@@ -301,13 +300,19 @@ public class SubscriptionsDb extends SQLiteOpenHelperEx {
 		}
 	}
 
-
+	/**
+	 * Delete any videos stored in the database (for subscribed channels) that are over a month old.
+	 * @return
+	 */
 	public boolean trimSubscriptionVideos() {
 		int result = getWritableDatabase().delete(SubscriptionsVideosTable.TABLE_NAME, String.format("%s < DATETIME('now', '-1 month')", SubscriptionsVideosTable.COL_YOUTUBE_VIDEO_DATE), null);
 		return result > 0;
 	}
 
-
+	/**
+	 * Query the database to retrieve all videos for subscribed channels.
+	 * @return
+	 */
 	public List<YouTubeVideo> getSubscriptionVideos() {
 		Cursor	cursor = getReadableDatabase().query(
 							SubscriptionsVideosTable.TABLE_NAME,

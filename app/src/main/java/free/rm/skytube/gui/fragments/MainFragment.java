@@ -24,9 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import free.rm.skytube.R;
-import free.rm.skytube.gui.businessobjects.MainActivityListener;
 import free.rm.skytube.businessobjects.db.BookmarksDb;
 import free.rm.skytube.gui.businessobjects.FragmentEx;
+import free.rm.skytube.gui.businessobjects.MainActivityListener;
 import free.rm.skytube.gui.businessobjects.SubsAdapter;
 
 public class MainFragment extends FragmentEx {
@@ -110,6 +110,11 @@ public class MainFragment extends FragmentEx {
 		// select the default tab:  the default tab is defined by the user through the Preferences
 		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getActivity());
 		viewPager.setCurrentItem(Integer.parseInt(sp.getString(getString(R.string.pref_key_default_tab), "0")));
+
+		// Set the current viewpager fragment as selected, as when the Activity is recreated, the Fragment
+		// won't know that it's selected. When the Feeds fragment is the default tab, this will prevent the
+		// refresh dialog from showing when an automatic refresh happens.
+		videoGridFragmentsList.get(viewPager.getCurrentItem()).onFragmentSelected();
 
 		return view;
 	}

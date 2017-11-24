@@ -17,7 +17,6 @@
 
 package free.rm.skytube.gui.fragments;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,6 +28,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import org.joda.time.DateTime;
+
 import java.util.List;
 
 import butterknife.BindView;
@@ -37,7 +38,6 @@ import free.rm.skytube.R;
 import free.rm.skytube.app.SkyTubeApp;
 import free.rm.skytube.businessobjects.AsyncTaskParallel;
 import free.rm.skytube.businessobjects.GetSubscriptionVideosTask;
-import free.rm.skytube.gui.businessobjects.MainActivityListener;
 import free.rm.skytube.businessobjects.VideoCategory;
 import free.rm.skytube.businessobjects.YouTubeChannel;
 import free.rm.skytube.businessobjects.YouTubeVideo;
@@ -67,7 +67,15 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Sub
 	@Override
 	public void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		shouldRefresh = true;
+
+		// Only do an automatic refresh of subscriptions if it's been more than three hours since the last one was done.
+		long l = SkyTubeApp.getPreferenceManager().getLong(SkyTubeApp.KEY_SUBSCRIPTIONS_LAST_UPDATED, -1);
+		DateTime subscriptionsLastUpdated = new DateTime(l);
+		DateTime threeHoursAgo = new DateTime().minusHours(3);
+		if(subscriptionsLastUpdated.isBefore(threeHoursAgo)) {
+			shouldRefresh = true;
+		}
+
 		setLayoutResource(R.layout.videos_gridview_feed);
 		subscriptionsBackupsManager = new SubscriptionsBackupsManager(getActivity(), SubscriptionsFeedFragment.this);
 	}
@@ -191,7 +199,7 @@ public class SubscriptionsFeedFragment extends VideosGridFragment implements Sub
 
 
 	@Override
-	protected String getFragmentName() {
+	public String getFragmentName() {
 		return SkyTubeApp.getStr(R.string.feed);
 	}
 
