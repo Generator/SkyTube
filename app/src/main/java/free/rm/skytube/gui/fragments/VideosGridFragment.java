@@ -71,7 +71,7 @@ public abstract class VideosGridFragment extends BaseVideosGridFragment {
 		videoGridAdapter.setProgressBar(progressBar);
 
 		if (getVideoCategory() != null)
-			videoGridAdapter.setVideoCategory(getVideoCategory());
+			videoGridAdapter.setVideoCategory(getVideoCategory(), getSearchString());
 
 		videoGridAdapter.setListener((MainActivityListener)getActivity());
 
@@ -100,6 +100,21 @@ public abstract class VideosGridFragment extends BaseVideosGridFragment {
 	 * @return Returns the category of videos being displayed by this fragment.
 	 */
 	protected abstract VideoCategory getVideoCategory();
+
+
+	/**
+	 * @return Returns the search string used when setting the video category.  (Can be used to
+	 * set the channel ID in case of VideoCategory.CHANNEL_VIDEOS).
+	 */
+	protected String getSearchString() {
+		return null;
+	}
+
+
+	/**
+	 * @return The fragment/tab name/title.
+	 */
+	public abstract String getFragmentName();
 
 
 	/**
